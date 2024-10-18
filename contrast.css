@@ -1,0 +1,44 @@
+/* This contrast stylesheet only affects the page if
+ * the user has set their OS or browser to prefer
+ * more contrast.
+ *
+ * There are better ways to achieve this using
+ * CSS Custom Properties (variables), which we
+ * cover in the Web Programming module.
+ */
+@media (prefers-contrast: more) {
+  body {
+    background: black;
+    color: yellow;
+  }
+
+  article {
+    background: black;
+    color: yellow;
+  }
+
+  section {
+    background: yellow;
+  }
+
+  .important {
+    background: #CCFF00;
+  }
+
+  #rich1 {
+    border: 0.5em dashed black;
+    border-radius: 1em;
+  }
+
+  /* Set the text color of navigation anchor elements to white (i.e. white links) */
+  nav a {
+    background: black;
+    color: white;
+    border: white solid 0.3em;
+  }
+
+  :target {
+    background: #FF99FF;
+    color: black;
+  }
+}

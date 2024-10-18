@@ -1,0 +1,122 @@
+/* Set the background color of the
+ * body to blue and text color to
+ * white
+ */
+body {
+  background: blue;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Style all articles */
+article {
+  background: lightgrey;
+  color: black;
+  padding: 1em;
+}
+
+/* Add padding of 1em to all direct
+ * children of article elements
+ */
+article>* {
+  padding: 1em;
+}
+
+/* Style all sections */
+section {
+  background: white;
+  color: black;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  padding: 1em;
+}
+
+article>h1 {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+/* Style all h1 elements that are
+ * children of section elements
+ */
+section>h2,
+section>h3 {
+  margin: 0;
+}
+
+/* All elements that we deem important
+ * can be rendered differently using this
+ * rule - just add...
+ *   class="important"
+ * ...to the element.
+ */
+.important {
+  background: #CCFF00;
+}
+
+/* Empty rule for element with id rich1 */
+#rich1 {
+  border: 0.25em solid black;
+  border-radius: 1em;
+}
+
+/* Set the text color of navigation anchor elements to white (i.e. white links) */
+nav a {
+  background: #2196F3;
+  color: white;
+  padding: 0.5em;
+  margin: 0.25em;
+  border-radius: 0.25em;
+  border: white solid 0.1em;
+  text-decoration: none;
+}
+
+/* This is a pseudo selector.  The element
+ * it selects is different based on the
+ * contents of the URL fragment after 
+ * the (#) hash - so when a user clicks 
+ * on a nav link the target will change.
+ */
+:target {
+  background: #FFCC00;
+}
+
+/* The default layout is for mobile phones
+ * with a nav menu appearing as a column
+ * of text.
+ */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Remove the margin from below paragraphs so we
+ * don't have extra white space in the boxes.
+ */
+p {
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Media query for screens wider than 30em */
+@media (width>30em) {
+
+  /* We change the background - this isn't
+   * really necessary but it helps us know
+   * when we are changing between styles
+   */
+  body {
+    background: black;
+  }
+
+  /* On wider screens we make the nav menu
+   * a horizontal row
+   */
+  nav {
+    flex-direction: row;
+  }
+}
