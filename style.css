@@ -6,6 +6,8 @@ body {
   background: blue;
   color: white;
   font-family: sans-serif;
+  max-width: 50em;
+  margin: auto;
 }
 
 /* Style all articles */
@@ -13,6 +15,7 @@ article {
   background: lightgrey;
   color: black;
   padding: 1em;
+  border-radius: 0.25em;
 }
 
 /* Add padding of 1em to all direct
@@ -103,7 +106,7 @@ footer {
 }
 
 /* Media query for screens wider than 30em */
-@media (width>30em) {
+@media (width>40em) {
 
   /* We change the background - this isn't
    * really necessary but it helps us know
